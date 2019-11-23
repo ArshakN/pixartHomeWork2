@@ -3,7 +3,7 @@ import java.util.*
 
  val userList: List<User> = listOf(
     User(UUID.randomUUID().toString(), "a", "Kirstie", "Gebhardt"),
-    User(UUID.randomUUID().toString(), "a", "Tambra", "Krone"),
+    User(UUID.randomUUID().toString(), "b", "Tambra", "Krone"),
     User(UUID.randomUUID().toString(), "c", "Sherice", "Lucey"),
     User(UUID.randomUUID().toString(), "d", "Casandra", "Farr"),
     User(UUID.randomUUID().toString(), "e", "Werner", "Bertram"),
@@ -53,5 +53,5 @@ import java.util.*
     Tag(UUID.randomUUID().toString(), "beautiful")
 )
 
- var recentUser = mutableListOf<User>()
- var recentTag = mutableListOf<Tag>()
+ var recentUser = mutableSetOf<User>()
+ var recentTag = mutableSetOf<Tag>()

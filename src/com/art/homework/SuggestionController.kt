@@ -1,8 +1,8 @@
 package com.art.homework
 
 interface SuggestionController<T> {
-    fun search(search:String) : List <T>
-    fun showAll()
+    fun search(find:String) : List <T>
+    fun showAll(search:String)
     fun recent(): List<String>
 
 }

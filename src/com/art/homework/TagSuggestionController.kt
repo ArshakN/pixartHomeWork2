@@ -7,8 +7,9 @@ class TagSuggestionController:SuggestionController<Tag> {
         return find
     }
 
-    override fun showAll(){
-        println(tagList.map { it.tag })
+    override fun showAll(serching:String){
+        val find = tagList.filter{ it.tag.contains(serching,true)}
+        println(find.map { it.tag })
     }
 
     override fun recent() = recentTag.map{ it.tag }

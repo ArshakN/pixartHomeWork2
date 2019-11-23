@@ -14,7 +14,7 @@ fun main() {
                     println("searched users: $recentUsers")
                 }
                 else -> {
-                    userSuggestionController.showAll()
+                    userSuggestionController.showAll(startSymbol.substring(1,startSymbol.length))
                     println("Type username that you interested in")
                     val username = readLine()!!
                     val searchedUsers = userSuggestionController.search(username)
@@ -28,7 +28,7 @@ fun main() {
                     println("searched tags: $recentTags")
                 }
                 else -> {
-                    tagSuggestionController.showAll()
+                    tagSuggestionController.showAll(startSymbol.substring(1,startSymbol.length))
                     println("Type hashtag that you interested in")
                     val tag = readLine()!!
                     val searchedTags = tagSuggestionController.search(tag)

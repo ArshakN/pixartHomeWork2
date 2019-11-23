@@ -8,8 +8,9 @@ class UserSuggestionController:SuggestionController<User> {
         return find
     }
 
-    override fun showAll(){
-        println(userList.map { it.nickname })
+    override fun showAll(serching:String){
+        val find = userList.filter{ it.name.contains(serching,true)}
+        println(find.map { it.nickname })
     }
 
     override fun recent() = recentUser.map{ it.nickname }
